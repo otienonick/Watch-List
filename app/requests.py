@@ -1,5 +1,4 @@
-import urllib.request
-import json
+import urllib.request,json
 from .models import Movie
 
 

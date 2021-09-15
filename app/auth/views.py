@@ -7,7 +7,7 @@ from flask_login import login_user,login_required,logout_user
 from ..email import mail_message
 
 
-@auth.route('/login',methods = ['GET','POST'])
+@auth.route('/login',methods=['GET','POST'])
 def login():
     login_form = LoginForm()
     if login_form.validate_on_submit():
@@ -19,17 +19,17 @@ def login():
         flash('Invalid username or Password')
 
     title = "watchlist login"
-
-    return render_template('auth/login.html',login_form = login_form,title = title)
+    return render_template('auth/login.html',login_form = login_form,title=title)
 
     
+
 
 @auth.route('/logout')
 @login_required
 def logout():
     logout_user()
+    flash('You are logged out')
     return redirect(url_for("main.index"))
-
 
 
 @auth.route('/register', methods = ["GET","POST"])

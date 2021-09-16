@@ -5,7 +5,6 @@ from app.models import User,Role,Review
 
 
 # creating app instance
-app = create_app('production')
 app = create_app('test')
 
 

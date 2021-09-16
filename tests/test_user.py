@@ -17,7 +17,7 @@ class UserModelTest(unittest.TestCase):
         
         '''
 
-        testcase to to ascertain that when password is being hashed and the pass_secure contains a value.
+        testcase to  ascertain that when password is being hashed and the pass_secure contains a value.
         
         '''
         self.assertTrue(self.new_user.password_hash is not None)

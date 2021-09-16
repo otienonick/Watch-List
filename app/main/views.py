@@ -121,11 +121,11 @@ def update_profile(uname):
         db.session.add(user)
         db.session.commit()
 
-        return redirect(url_for('.profile',uname=user.username))
+        return redirect(url_for('.profile',uname = user.username))
 
     return render_template('profile/update.html',form = form)
 
-@main.route('/user/<uname>/update/pic',methods= ['POST'])
+@main.route('/user/<uname>/update/pic',methods = ['POST'])
 @login_required
 def update_pic(uname):
     user = User.query.filter_by(username = uname).first()
